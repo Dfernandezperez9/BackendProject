@@ -65,3 +65,6 @@ Dependencia utilizada para la conexion de el servidor a la base de datos de Mong
 
 MULTER:
 Dependencia utilizada para permitir la subida de archivos locales como .jpg en formato binario.
+
+CORS:
+Dependencia utilizada para la permision de el acceso desde dominios externos.

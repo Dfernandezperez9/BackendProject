@@ -6,7 +6,9 @@ const APP = EXPRESS();
 const PORT = 4000;
 const ROUTES = require('./routes/routes.js');
 const PATH = require('path');
+const CORS = require('cors');
 
+APP.use(CORS());
 APP.use(COOKIE_PARSER());
 APP.use(EXPRESS.json());
 APP.use(EXPRESS.urlencoded({ extended: true }));
