@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editar Producto</title>
+  <link rel="stylesheet" type="text/css" href="/css/edit_style.css">
+</head>
+<body>
+  <header>
+    <h1>Editar Producto</h1>
+  </header>
+  <main>
+    <form action="/dashboard/edit/<%= item._id %>" method="post" enctype="multipart/form-data">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" value="<%= item.nombre %>" required><br><br>
+
+      <label for="descripcion">Descripción:</label>
+      <textarea id="descripcion" name="descripcion" required><%= item.descripcion %></textarea><br><br>
+
+      <label for="categoria">Categoría:</label>
+      <select id="categoria" name="categoria" required>
+        <option value="camisetas">Camisetas</option>
+        <option value="pantalones">Pantalones</option>
+        <option value="zapatos">Zapatos</option>
+        <option value="accesorios">Accesorios</option>
+      </select><br><br>
+
+      <label for="talla">Talla:</label>
+      <select id="talla" name="talla" required>
+        <option value="XS">XS</option>
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+        <option value="XL">XL</option>
+      </select><br><br>
+
+      <label for="precio">Precio:</label>
+      <input type="number" id="precio" name="precio" value="<%= item.precio %>" required><br><br>
+
+      <label for="imagen">Imagen:</label>
+      <input type="file" id="imagen" name="imagen" required><br><br>
+      <img src="/uploads/<%= item.imagen %>" alt="<%= item.nombre %>"><br><br>
+
+      <input type="submit" value="Guardar Cambios"><br><br>
+      <a href="/dashboard">Cancelar</a>
+      
+    </form>
+  </main>
+  <footer>
+    <p>&copy; 2024</p>
+  </footer>
+</body>
+</html>

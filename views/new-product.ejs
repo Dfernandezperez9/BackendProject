@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuevo Producto</title>
+  <link rel="stylesheet" type="text/css" href="/css/create_style.css">
+</head>
+<body>
+  <header>
+    <h1>Nuevo Producto</h1>
+  </header>
+  <main>
+    <form action="/dashboard/new" method="post" enctype="multipart/form-data">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required><br><br>
+
+      <label for="descripcion">Descripción:</label>
+      <textarea id="descripcion" name="descripcion" required></textarea><br><br>
+
+      <label for="imagen">Imagen:</label>
+      <input type="file" id="imagen" name="imagen" required><br><br>
+
+      <label for="categoria">Categoría:</label>
+      <select id="categoria" name="categoria" required>
+        <option value="Camisetas">Camisetas</option>
+        <option value="Pantalones">Pantalones</option>
+        <option value="Zapatos">Zapatos</option>
+        <option value="Accesorios">Accesorios</option>
+      </select><br><br>
+
+      <label for="talla">Talla:</label>
+      <select id="talla" name="talla" required>
+        <option value="XS">XS</option>
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+        <option value="XL">XL</option>
+      </select><br><br>
+
+      <label for="precio">Precio:</label>
+      <input type="number" id="precio" name="precio" required><br><br>
+
+      <input type="submit" value="Subir Producto"><br><br>
+
+      <a href="/">Volver al inicio</a><br><br>
+      <a href="/dashboard">Ir al panel de control</a>
+      
+    </form>
+  </main>
+  <footer>
+    <p>&copy; 2024</p>
+  </footer>
+</body>
+</html>

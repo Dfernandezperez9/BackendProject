@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productos</title>
+  <link rel="stylesheet" type="text/css" href="/css/products_style.css">
+</head>
+<body>
+  <header>
+    <h1 id="top">Listado de Productos</h1>
+    <a href="/" id="volver-inicio">Volver a la pagina de inicio</a>
+  </header>
+  <main>
+    <h2>Productos</h2>
+    <h3>Camisetas</h3>
+    <ul>
+      <% items.filter(function(item) { return item.categoria === 'Camisetas'; }).forEach(function(item) { %>
+        <li>
+          <h3><%= item.nombre %></h3>
+          <img src="/uploads/<%= item.imagen %>" alt="<%= item.nombre %>">
+          <p><%= item.descripcion %></p>
+          <p>Categoría: <%= item.categoria %></p>
+          <p>Precio: <%= item.precio %>€</p>
+          <p>Talla: <%= item.talla %></p>
+          <a href="/products/<%= item._id %>">Visualizar</a>
+        </li>
+      <% }); %>
+    </ul>
+    <a href="#top" id="volver-arriba">Volver arriba</a>
+    <h3>Pantalones</h3>
+    <ul>
+      <% items.filter(function(item) { return item.categoria === 'Pantalones'; }).forEach(function(item) { %>
+        <li>
+          <h3><%= item.nombre %></h3>
+          <img src="/uploads/<%= item.imagen %>" alt="<%= item.nombre %>">
+          <p><%= item.descripcion %></p>
+          <p>Categoría: <%= item.categoria %></p>
+          <p>Precio: <%= item.precio %>€</p>
+          <p>Talla: <%= item.talla %></p>
+          <a href="/products/<%= item._id %>">Visualizar</a>
+        </li>
+      <% }); %>
+    </ul>
+    <a href="#top" id="volver-arriba">Volver arriba</a>
+    <h3>Zapatos</h3>
+    <ul>
+      <% items.filter(function(item) { return item.categoria === 'Zapatos'; }).forEach(function(item) { %>
+        <li>
+          <h3><%= item.nombre %></h3>
+          <img src="/uploads/<%= item.imagen %>" alt="<%= item.nombre %>">
+          <p><%= item.descripcion %></p>
+          <p>Categoría: <%= item.categoria %></p>
+          <p>Precio: <%= item.precio %>€</p>
+          <p>Talla: <%= item.talla %></p>
+          <a href="/products/<%= item._id %>">Visualizar</a>
+        </li>
+      <% }); %>
+    </ul>
+    <a href="#top" id="volver-arriba">Volver arriba</a>
+    <h3>Accesorios</h3>
+    <ul>
+      <% items.filter(function(item) { return item.categoria === 'Accesorios'; }).forEach(function(item) { %>
+        <li>
+          <h3><%= item.nombre %></h3>
+          <img src="/uploads/<%= item.imagen %>" alt="<%= item.nombre %>">
+          <p><%= item.descripcion %></p>
+          <p>Categoría: <%= item.categoria %></p>
+          <p>Precio: <%= item.precio %>€</p>
+          <p>Talla: <%= item.talla %></p>
+          <a href="/products/<%= item._id %>">Visualizar</a>
+        </li>
+      <% }); %>
+    </ul>
+    <a href="#top" id="volver-arriba">Volver arriba</a>
+    <a href="/">Volver al inicio</a>
+  </main>
+  <footer>
+    <p>&copy; 2024</p>
+  </footer>
+</body>
+</html>

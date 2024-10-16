@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard de Administrador</title>
+  <link rel="stylesheet" type="text/css" href="/css/dashboard_style.css">
+</head>
+<body>
+  <header>
+    <h1 id="top">Dashboard de Administrador</h1>
+  </header>
+  <main>
+    <h2>Productos</h2>
+    <h3>Camisetas</h3>
+    <ul>
+      <% items.filter(function(item) { return item.categoria === 'Camisetas'; }).forEach(function(item) { %>
+        <li>
+          <h3><%= item.nombre %></h3>
+          <img src="/uploads/<%= item.imagen %>" alt="<%= item.nombre %>">
+          <p><%= item.descripcion %></p>
+          <p>Categoría: <%= item.categoria %></p>
+          <p>Precio: <%= item.precio %>€</p>
+          <p>Talla: <%= item.talla %></p>
+          <br>
+          <form action="/dashboard/edit/<%= item._id %>" method="get">
+            <button type="submit">Editar</button>
+          </form>
+          <form action="/dashboard/delete/<%= item._id %>" method="post">
+            <input type="hidden" name="_method" value="delete">
+            <button type="submit">Eliminar</button><br>
+          </form>
+        </li><br><br><br>
+      <% }); %>
+    </ul>
+    <h3>Pantalones</h3>
+    <ul>
+      <% items.filter(function(item) { return item.categoria === 'Pantalones'; }).forEach(function(item) { %>
+        <li>
+          <h3><%= item.nombre %></h3>
+          <img src="/uploads/<%= item.imagen %>" alt="<%= item.nombre %>">
+          <p><%= item.descripcion %></p>
+          <p>Categoría: <%= item.categoria %></p>
+          <p>Precio: <%= item.precio %>€</p>
+          <p>Talla: <%= item.talla %></p>
+          <br>
+          <form action="/dashboard/edit/<%= item._id %>" method="get">
+            <button type="submit">Editar</button>
+          </form>
+          <form action="/dashboard/delete/<%= item._id %>" method="post">
+            <input type="hidden" name="_method" value="delete">
+            <button type="submit">Eliminar</button><br>
+          </form>
+        </li><br><br><br>
+      <% }); %>
+    </ul>
+    <h3>Zapatos</h3>
+    <ul>
+      <% items.filter(function(item) { return item.categoria === 'Zapatos'; }).forEach(function(item) { %>
+        <li>
+          <h3><%= item.nombre %></h3>
+          <img src="/uploads/<%= item.imagen %>" alt="<%= item.nombre %>">
+          <p><%= item.descripcion %></p>
+          <p>Categoría: <%= item.categoria %></p>
+          <p>Precio: <%= item.precio %>€</p>
+          <p>Talla: <%= item.talla %></p>
+          <br>
+          <form action="/dashboard/edit/<%= item._id %>" method="get">
+            <button type="submit">Editar</button>
+          </form>
+          <form action="/dashboard/delete/<%= item._id %>" method="post">
+            <input type="hidden" name="_method" value="delete">
+            <button type="submit">Eliminar</button><br>
+            
+          </form>
+        </li><br><br><br>
+      <% }); %>
+    </ul>
+    <h3>Accesorios</h3>
+    <ul>
+      <% items.filter(function(item) { return item.categoria === 'Accesorios'; }).forEach(function(item) { %>
+        <li>
+          <h3><%= item.nombre %></h3>
+          <img src="/uploads/<%= item.imagen %>" alt="<%= item.nombre %>">
+          <p><%= item.descripcion %></p>
+          <p>Categoría: <%= item.categoria %></p>
+          <p>Precio: <%= item.precio %>€</p>
+          <p>Talla: <%= item.talla %></p>
+          <br>
+          <form action="/dashboard/edit/<%= item._id %>" method="get">
+            <button type="submit">Editar</button>
+          </form>
+          <form action="/dashboard/delete/<%= item._id %>" method="post">
+            <input type="hidden" name="_method" value="delete">
+            <button type="submit">Eliminar</button><br>
+          </form>
+        </li><br><br><br>
+      <% }); %>
+    </ul>
+    <a href="#top" id="volver-arriba">Volver arriba</a>
+    <a href="/" id="volver-inicio">Volver al inicio</a><br>
+    <a href="/dashboard/new" id="subir-nuevo">Subir nuevo producto</a><br>
+    <a href="/logout" id="cerrar-sesion">Cerrar sesión</a>
+  </main>
+  <footer>
+    <p>&copy; 2024</p>
+  </footer>
+</body>
+</html>

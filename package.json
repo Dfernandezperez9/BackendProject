@@ -1,0 +1,30 @@
+{
+  "name": "backend-project-break",
+  "version": "1.0.0",
+  "description": "Vamos a montar una tienda de ropa con un catálogo de productos y un dashboard para el administrador. Los productos se guardarán en una base de datos de mongo en Atlas. Podemos usar como referencia el pdf [web_ejemplo.pdf](web_ejemplo.pdf) que contiene un ejemplo de cómo podría ser la interfaz de la tienda y el dashboard.",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "5.1.1",
+    "cookie-parser": "1.4.6",
+    "crypto": "1.0.1",
+    "dotenv": "16.4.5",
+    "ejs": "3.1.10",
+    "express": "4.21.0",
+    "express-session": "1.18.0",
+    "jsonwebtoken": "9.0.2",
+    "mongoose": "8.7.0",
+    "multer": "1.4.5-lts.1"
+  },
+  "devDependencies": {
+    "@jest/globals": "^29.7.0",
+    "jest": "29.7.0",
+    "jest-environment-node": "^29.7.0",
+    "supertest": "7.0.0"
+  }
+}

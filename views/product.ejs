@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Producto Seleccionado</title>
+  <link rel="stylesheet" type="text/css" href="/css/product_style.css">
+</head>
+<body>
+  <header>
+    <h1>Producto Seleccionado</h1>
+  </header>
+  <main>
+    <div class="producto">
+      <h2><%= item.nombre %></h2>
+      <img src="/uploads/<%= item.imagen %>" alt="<%= item.nombre %>">
+      <p><%= item.descripcion %></p>
+      <p>Categoría: <%= item.categoria %></p>
+      <p>Talla: <%= item.talla %></p>
+      <p>Precio: <%= item.precio %></p>
+    </div>
+    <a href="/products">Volver</a>
+  </main>
+  <footer>
+    <p>&copy; 2024</p>
+  </footer>
+</body>
+</html>
