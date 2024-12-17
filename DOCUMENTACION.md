@@ -11,7 +11,7 @@ Aplicacion web con CRUD (Create, Read, Update, Delete), conexion a base de datos
 
 Aplicacion enfocada en su totalidad a la comodidad de el usuario que realiza operaciones CRUD cien por cien desde el navegador mediante formularios, la utilizacion de herramientas como POSTMAN no es necesaria en absoluto, no obstante, si el administrador desea utilizar herramientas como POSTMAN puede hacerlo (ver METODO DE UTILIZACION).
 
-Se han desarrollado formularios para los metodos CREATE Y UPDATE, con INPUTS que utilizan el atributo REQUIRE para VALIDAR el contenido y evitar campos vacios, para el campo PRECIO se ha utilizado un INPUT con TYPE NUMBER que no permite letras, para campos como TALLA y CATEGORIA se han utilizado INPUTS con TYPE SELECT con opciones limitadas a las posibilidades.
+Se han implementado formularios para los metodos CREATE Y UPDATE, con INPUTS que utilizan el atributo REQUIRE para VALIDAR el contenido y evitar campos vacios, para el campo PRECIO se ha utilizado un INPUT con TYPE NUMBER que no permite letras, para campos como TALLA y CATEGORIA se han utilizado INPUTS con TYPE SELECT con opciones limitadas a las posibilidades.
 
 No obstante se ha implementado la logica necesaria dentro de el codigo de los endpoints mediante el uso de CONDICIONALES para INCLUIR validacion, para que, en caso de que el administrador desee utilizar una herramienta como POSTMAN, pueda hacerlo y en caso de sufrir una equivocacion, el terminal devuelva un ERROR PERSONALIZADO AL PROBLEMA.
 
