@@ -14,7 +14,7 @@ APP.use(EXPRESS.json());
 APP.use(EXPRESS.urlencoded({ extended: true }));
 APP.use(EXPRESS.static('public'));
 APP.use('/css', EXPRESS.static(PATH.join(__dirname, 'css')));
-APP.use('/uploads', EXPRESS.static(PATH.join(__dirname, 'uploads'))); // Nueva línea de código
+APP.use('/uploads', EXPRESS.static(PATH.join(__dirname, 'uploads')));
 APP.set('view engine', 'ejs');
 
 APP.use(SESSION({
